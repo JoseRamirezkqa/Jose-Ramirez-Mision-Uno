@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+</head>
+<body class="h-[100vh] flex font-[Inter]">
+    <div class="bg-[#C9231B] w-[20%] h-[100%]">
+    </div>
+    <div class="w-[80%] h-[100%] pt-[6.25rem] pr-[3.125rem]">
+        <div class="flex mb-[3.75rem] mt-[1.8125rem]">
+            <img src="assets/flecha.svg" alt="" class="ml-[1.875rem]" onclick="volver()">
+            <h1 class="font-[700] text-[1.5rem] leading-[3rem] ml-[35.625rem]">
+                Registro Personas
+            </h1>
+        </div>
+        <div class="w-[50rem] m-auto  h-[70%] text-[1rem] font-[700] leading-[1.25rem]">
+            <form onsubmit="event.preventDefault();guardar()">
+                <div class="flex mb-[3.75rem]">
+                    <div class="mr-[6.25rem]">
+                        <h1>Nombres</h1> <input type="text" class="w-[21.875rem] h-[3.75rem] border border-[#ED00D5] bg-[#F3F6FB] rounded-[0.625rem]" id="nombre" required autocomplete="off">                        
+                    </div>
+                    <div>
+                        <h1>Apellidos</h1> <input type="text"class="w-[21.875rem] h-[3.75rem] border border-[#ED00D5] bg-[#F3F6FB] rounded-[0.625rem]" id="apellido" required autocomplete="off">    
+                    </div>
+                </div>
+                <div class="flex mb-[3.75rem]">
+                    <div class="mr-[1.5625rem]">
+                        <h1>Area </h1><input type="text" class="w-[15.625rem] h-[3.75rem] border border-[#ED00D5] bg-[#F3F6FB] rounded-[0.625rem]" id="area" required autocomplete="off">
+                    </div>
+                    <div class="mr-[1.5625rem]">
+                        <h1>Usuario</h1> <input type="text" class="w-[15.625rem] h-[3.75rem] border border-[#ED00D5] bg-[#F3F6FB] rounded-[0.625rem]" id="usuario"  required autocomplete="off">
+                    </div>
+                    <div>
+                        <h1>Edad</h1> <input type="number" class="w-[15.625rem] h-[3.75rem] border border-[#ED00D5] bg-[#F3F6FB] rounded-[0.625rem]" id="edad" required autocomplete="off">
+                    </div>
+                </div>
+                <div class="mb-[3.75rem]">
+                    <h1>Direccion</h1> <input type="text" class="w-[100%] h-[3.75rem] border border-[#ED00D5] bg-[#F3F6FB] rounded-[0.625rem]" required autocomplete="off">
+                    
+                </div>
+                <div>
+                    <h1>Email</h1> <input type="email" class="w-[100%] h-[3.75rem] border border-[#ED00D5] bg-[#F3F6FB] rounded-[0.625rem]" id="email" required autocomplete="off">
+                </div>
+                <button class="bg-[#CC2233] w-[12.5rem] h-[3.75rem] text-[1.125rem] text-white rounded-[1.25rem] mt-[3.75rem] mx-[18.75rem]" type="submit" ">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>

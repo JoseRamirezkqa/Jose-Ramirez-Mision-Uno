@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+</head>
+
+<body class="h-[100vh] flex font-[Inter]">
+    <div class="bg-[#C9231B] w-[20%] h-[100%]">
+    </div>
+    <div class="w-[80%] h-[100%] pt-[6.25rem] pr-[3.125rem]">
+        <div class="flex mb-[3.75rem] mt-[1.8125rem]">
+            <h1 class="font-[Inter] text-[2.25rem] leading-[3rem] font-[700] ml-[37.125rem] mr-[25rem]">
+                Usuarios
+            </h1>
+            <button class="text-white bg-[#CC2233] w-[16rem] h-[3.125rem] rounded-[1.25rem] text-[1.125rem] font-[700] mr-[2.5rem]" onclick="crearUsuario()">
+                Crear Usuario
+            </button>
+        </div>
+        <div class="flex mb-[3.125rem]">
+            <h1 class="font-[700] text-[1.5rem] leading-[3rem] ml-[3.75rem] mr-[0.625rem]">Buscar usuario </h1>
+            <img src="assets/buscar.svg" alt="" class="mr-[0.9375rem]">
+            <input type="text" class="bg-[#F3F6FB] w-[28.125rem] h-[3.125rem] border border-black rounded-[1.25rem]" id="buscar">
+        </div>
+        <div>
+            <table class="w-[80%] m-auto" id="table">
+                <tr class="bg-[#F3F6FB] font-[700] text-[1.125rem] leading-[1.3613rem] h-[2.5rem]">
+                    <th>
+                        Area
+                        <img src="assets/aling.svg" alt="" class="inline-block ml-[0.625rem]">
+                    </th>
+                    <th>
+                        Nombre
+                        <img src="assets/aling.svg" alt="" class="inline-block ml-[0.625rem]">
+                    </th>
+                    <th>
+                        Usuario
+                        <img src="assets/aling.svg" alt="" class="inline-block ml-[0.625rem]">
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Edad
+                        <img src="assets/aling.svg" alt="" class="inline-block ml-[0.625rem]">
+                    </th>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+<script src="scipt.js"></script>
+</html>
