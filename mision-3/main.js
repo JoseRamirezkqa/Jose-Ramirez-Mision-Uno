@@ -33,6 +33,7 @@ function guardar() {
         key = parseInt(localStorage.key(i)) + 1
         let user = JSON.parse(localStorage.getItem(i))  
         usuarioArray.push(user.usuario)
+        console.log(key)
     }
     for (let i = 0; i < usuarioArray.length; i++) {
         if (usuario.value == usuarioArray[i]) {
