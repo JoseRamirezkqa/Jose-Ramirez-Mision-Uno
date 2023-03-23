@@ -8,6 +8,7 @@ const area = document.querySelector("#area")
 //lets
 let key = 0
 let usuarioArray = []
+let clasesArray = []
 let bandera = false
 // class 
 class Persona {
@@ -29,24 +30,38 @@ class Persona {
 }
 //funciones
 function guardar() {
-    for (let i = 0; i < localStorage.length; i++) {
-        key = parseInt(localStorage.key(i)) + 1
-        let user = JSON.parse(localStorage.getItem(i))  
-        usuarioArray.push(user.usuario)
-        console.log(key)
+    if (localStorage.length != 0) {
+        let data = JSON.parse(localStorage.persona)
+        for (let i = 0; i < data.length; i++) {
+            usuarioArray.push(data[i].usuario)
+        }
     }
+
     for (let i = 0; i < usuarioArray.length; i++) {
         if (usuario.value == usuarioArray[i]) {
             bandera = true;
-        } 
+        }
     }
-    if(bandera == true){
-        alert('no se puede repetir usuarios')       
-    }else{
-        const personaNew = new Persona(nombre.value, apellido.value, edad.value, email.value, usuario.value, area.value)
-        localStorage.setItem(key, JSON.stringify(personaNew))
-        volver()
+    if (bandera == true) {
+        alert('no se puede repetir usuarios')
+    } else {
+        if (localStorage.length != 0) {
+            let data = JSON.parse(localStorage.persona)
+            for (let i = 0; i < data.length; i++) {
+                console.log(data[i])
+                clasesArray.push(data[i])
+            }
+            const personaNew = new Persona(nombre.value, apellido.value, edad.value, email.value, usuario.value, area.value)
+            clasesArray.push(personaNew)
+            localStorage.persona = JSON.stringify(clasesArray)
+        } else {
+            const personaNew = new Persona(nombre.value, apellido.value, edad.value, email.value, usuario.value, area.value)
+            clasesArray.push(personaNew)
+            localStorage.persona = JSON.stringify(clasesArray)
+        }
+       volver()
     }
+    console.log(localStorage.persona)
     bandera = false
 }
 //movimiento entre paginas
